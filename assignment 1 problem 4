@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class DaysConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the number of days as an int
+        System.out.print("Enter number of days: ");
+        int totalDays = scanner.nextInt();
+        
+        // Calculate weeks and remaining days
+        int weeks = totalDays / 7;
+        int remainingDays = totalDays % 7;
+        
+        // Print the result
+        System.out.println(weeks + " weeks and " + remainingDays + " days");
+        
+        scanner.close();
+    }
+}
