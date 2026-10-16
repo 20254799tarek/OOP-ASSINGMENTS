@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class InvoiceCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Declare tax rate constant
+        final double TAX_RATE = 0.14;
+        
+        // Read unit price and quantity
+        System.out.print("Enter unit price: ");
+        double unitPrice = scanner.nextDouble();
+        
+        System.out.print("Enter quantity: ");
+        int quantity = scanner.nextInt();
+        
+        // Calculate subtotal, tax, and total
+        double subtotal = unitPrice * quantity;
+        double tax = subtotal * TAX_RATE;
+        double total = subtotal + tax;
+        
+        // Print results with two decimals
+        System.out.printf("Subtotal = %.2f, Tax = %.2f, Total = %.2f\n", subtotal, tax, total);
+        
+        scanner.close();
+    }
